@@ -1,4 +1,4 @@
-require "benchmarked/version"
+require 'benchmarked/version'
 
 module Benchmarked
   # Your code goes here...
