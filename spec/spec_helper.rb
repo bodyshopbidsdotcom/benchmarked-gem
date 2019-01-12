@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'benchmarked'
+require 'pry'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -10,5 +11,9 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.after :each do
+    Benchmarked.clean_configuration
   end
 end
